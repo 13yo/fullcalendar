@@ -21,7 +21,12 @@
 
 		$('#calendar').fullCalendar({
 			theme: true,
-			editable: true,
+			editable: false,
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
 			events: "json-events.php"
 		});
 	});
