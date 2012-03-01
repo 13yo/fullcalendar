@@ -1,7 +1,7 @@
 (function() {
 
 var JQUERY = 'jquery-1.7.1.min.js';
-var JQUERY_UI = 'jquery-ui-1.8.17.custom.min.js';
+var JQUERY_UI = 'jquery-ui-1.8.18.custom.min.js';
 var JQUERY_LEGACY = 'jquery-1.3.2.min.js';
 var JQUERY_UI_LEGACY = 'jquery-ui-1.7.3.custom.min.js';
 
@@ -32,6 +32,9 @@ if (!legacy) {
 		jslib('../lib/' + JQUERY_UI_LEGACY);
 	}
 }
+
+jslib('../lib/Markdown.Converter.js')
+jslib('../lib/Markdown.Sanitizer.js')
 
 if (debug && (!window.console || !window.console.log)) {
 	jslib('../tests/lib/firebug-lite/firebug-lite-compressed.js');
