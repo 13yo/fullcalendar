@@ -27,7 +27,13 @@
 				center: 'title',
 				right: 'month,agendaWeek,agendaDay'
 			},
-			events: "json-events.php"
+			events: "json-events.php",
+			loading: function(bool) {
+				if (bool) $('#loading').show();
+				else $('#loading').hide();
+			},
+			allDay: false,
+			defaultView: agendaWeek
 		});
 	});
 
@@ -52,6 +58,11 @@
 		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
 		}
 
+	#loading {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		}
 	#calendar {
 		width: 900px;
 		margin: 0 auto;
@@ -60,6 +71,7 @@
 </style>
 </head>
 <body>
+	<div id='loading' style='display:none'>loading...</div>
 <div id='calendar'></div>
 <div id="dialog" title="Testdialog"></div>
 </body>
