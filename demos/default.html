@@ -32,11 +32,10 @@
 	});
 
 	function openDialog(title, text){
-		$('#dialog').attr('title',title)
-		$('#dialog').html(converter.makeHtml(text))
-		$('#dialog').dialog({
+		var d = $('<div/>').attr('title',title).html(converter.makeHtml(text)).dialog({
 			modal: true,
 		});
+		$("#calendar").after(d)
 	}
 
 </script>
