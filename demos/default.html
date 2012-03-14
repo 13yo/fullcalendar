@@ -36,6 +36,9 @@
 		$("#calendar").after(d)
 		d.dialog({
 			modal: true,
+			close: function(events, ui){
+				d.remove()
+			}
 		});
 	}
 
