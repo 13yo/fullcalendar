@@ -31,13 +31,6 @@
         		url: 'json-events.php',
         		cache: true
     		},
-    		timeFormat: {
-    			// for agendaWeek and agendaDay
-    			agenda: 'H:mm{ - H:mm}', // 5:00 - 6:30
-
-    			// for all other views
-    			'': 'H:mm'            // 7p
-			},
 			loading: function(bool) {
 				if (bool) $('#loading').show();
 				else $('#loading').hide();
@@ -57,7 +50,15 @@
 			    month: 'MMMM yyyy',                             // September 2009
     			week: "MMM dd.[ yyyy]{ '&#8212;'[ MMM] dd. yyyy}", // Sep 7 - 13 2009
     			day: 'dddd, dd.MM.yyyy'                  // Dienstag, 07.09.2009
-			}
+			},
+			axisFormat: 'H:mm',
+			timeFormat: {
+    			// for agendaWeek and agendaDay
+    			agenda: 'H:mm{ - H:mm}', // 5:00 - 6:30
+
+    			// for all other views
+    			'': 'H:mm'            // 7p
+			},
 		});
 	});
 
