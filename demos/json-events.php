@@ -1,25 +1,8 @@
 <?php
 
-	$year = date('Y');
-	$month = date('m');
+	$ch = curl_init("http://feg.kaatz-media.de:9000/events");
+	curl_exec($ch);
+	curl_close($ch);
 
-	echo json_encode(array(
-	
-		array(
-			'id' => 111,
-			'title' => "Event1",
-			'start' => "$year-$month-10",
-			'url' => "http://yahoo.com/"
-		),
-		
-		array(
-			'id' => 222,
-			'title' => "Event2",
-			'start' => "$year-$month-20",
-			'end' => "$year-$month-22",
-			'url' => "http://yahoo.com/"
-		)
-	
-	));
 
 ?>
