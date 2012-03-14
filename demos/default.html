@@ -27,13 +27,27 @@
 				center: 'title',
 				right: 'month,agendaWeek,agendaDay'
 			},
-			events: "json-events.php",
+			events: {
+        		url: 'json-events.php',
+        		cache: true
+    		},
+    		timeFormat: {
+    			// for agendaWeek and agendaDay
+    			agenda: 'H:mm{ - H:mm}', // 5:00 - 6:30
+
+    			// for all other views
+    			'': 'H:mm'            // 7p
+			},
 			loading: function(bool) {
 				if (bool) $('#loading').show();
 				else $('#loading').hide();
 			},
 			allDayDefault: false,
-			defaultView: 'agendaWeek'
+			defaultView: 'agendaWeek',
+			monthNames: ['Januar', 'Februar', 'M&auml;rz', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+ 			monthNamesShort: ['Jan', 'Feb', 'M&auml;r', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'],
+ 			dayNames: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
+ 			dayNamesShort: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa']
 		});
 	});
 
