@@ -39,6 +39,12 @@
 				openDialog(event.title, event.description)
         		return false;
     		},
+    		eventMouseover: function(event, jsEvent, view){
+    			$(jsEvent.target).css('cursor','pointer')
+    		}
+    		eventMouseout: function(event, jsEvent, view){
+    			$(jsEvent.target).css('cursor','default')
+    		}
 			allDayDefault: false,
 			allDayText: 'ganztags',
 			defaultView: 'month',
