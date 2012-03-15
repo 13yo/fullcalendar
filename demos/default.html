@@ -36,7 +36,7 @@
 				else $('#loading').hide();
 			},
 			eventClick: function(event) {
-				openDialog(event.title, event.description)
+				openDialog(event.title, event.description, event.url)
         		return false;
     		},
     		eventMouseover: function(event, jsEvent, view){
@@ -79,8 +79,8 @@
 		});
 	});
 
-	function openDialog(title, text){
-		var d = $('<div id="dialog" title="'+title+'">'+converter.makeHtml(text)+'</div>')
+	function openDialog(title, text, url){
+		var d = $('<div id="dialog" title="'+title+'"><p>'+converter.makeHtml(text)+'</p><p><a href="'+url+'" alt="Terminbeschreibung">Zur Beschreibung</a></div>')
 		$("#calendar").after(d)
 		d.dialog({
 			modal: true,
