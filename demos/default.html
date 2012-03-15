@@ -35,6 +35,10 @@
 				if (bool) $('#loading').show();
 				else $('#loading').hide();
 			},
+			eventClick: function(event) {
+				openDialog(event.title, event.description)
+        		return false;
+    		},
 			allDayDefault: false,
 			allDayText: 'ganztags',
 			defaultView: 'month',
