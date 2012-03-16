@@ -8,6 +8,7 @@
 		$ch = curl_init($url);
 
 	println($url+"/tag/"+$_GET["tag"]);
+
 	curl_exec($ch);
 	curl_close($ch);
 
