@@ -7,7 +7,9 @@
 	else 
 		$ch = curl_init($url);
 
+
 	echo($url."/tag/".$_GET["tag"]);
+
 
 	curl_exec($ch);
 	curl_close($ch);
